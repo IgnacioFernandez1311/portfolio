@@ -1,0 +1,413 @@
+
+/*
+  --------------
+    Variables 
+  --------------
+*/
+
+:root {
+  --navbar-height: 7.5vh;
+  --color-blue-primary: #028090;
+  --color-green-primary: #1A5E63;
+  --shadow: 3px 5px 5px rgba(3, 32, 51, .8);
+  --project-item-width: 70vh;
+  --project-item-height: 40vh;
+}
+
+/*
+-----------------
+  End Variables 
+-----------------
+*/
+
+
+/*
+  -----------
+    General 
+  -----------
+*/
+
+@font-face {
+  font-family: 'Baloo Bhai 2';
+  src: url(../fonts/BalooBhai2-Regular.ttf);
+  font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Baloo Bhai 2';
+    scroll-behavior: smooth;
+}
+
+/*
+  --------------
+    End General 
+  --------------
+*/
+
+
+body {
+    background-color: #333;
+    width: 100vw;
+}
+
+
+/*
+  ----------
+    NavBar 
+  ----------
+*/
+
+.navbar {
+    position: fixed;
+    background-color: var(--color-blue-primary);
+    height: var(--navbar-height);
+    width: 100vw;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.navbar__ul {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__menu {
+  display: none;
+}
+
+.navbar__link {
+    font-size: 1.2rem;
+    margin: 0 1.5rem;
+}
+
+/*
+  --------------
+    End NavBar 
+  --------------
+*/
+
+
+/*
+  --------
+    Main
+  --------
+*/
+
+main {
+    padding-top: 8vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;color: #fff;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h2 {
+    font-size: 3rem;
+    background-color: var(--color-blue-primary);
+    width: 100vw;
+    text-align: center;
+    margin: 6vh 0;
+}
+
+.main__section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__about {
+    background-color: var(--color-green-primary);
+    padding: 2%;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 30px;
+}
+
+.main__description {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main__description h3 {
+    margin-top: 5%;
+    padding-right: 43%;
+}
+
+.main__description p {
+    font-size: 2rem;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 25%;
+}
+
+.main__img {
+    background-color: var(--color-blue-primary);
+    width: 40%;
+    height: 57.5vh;
+    border-radius: 100%;
+    margin-top: 5%;
+    box-shadow: var(--shadow);;
+}
+
+.main__about img {
+    height: 86%;
+    width: 86%;
+    border-radius: 100%;
+    object-fit: cover;
+    margin: 7%;
+}
+
+.main__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-green-primary);
+    min-width: 17.5%;
+    height: 50vh;
+    margin: 2%;
+    border-radius: 2.5%;
+    box-shadow: var(--shadow);
+}
+
+.main__card h3 {
+    font-size: 2rem;
+}
+
+.main__card img {
+    margin-top: 2.5rem;
+    max-width: 60%;
+}
+
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.main__project_type {
+    background-color: var(--color-green-primary);
+    width: 20%;
+    height: 7.5vh;
+    padding: .9% 0;
+    margin: 4%;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.main__project_item {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  width: var(--project-item-width);
+  height: var(--project-item-height);
+  margin: 1.5%;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+
+.main__project_item img {
+    object-fit: cover;
+    position: absolute;
+    width: var(--project-item-width);
+    height: var(--project-item-height);
+    border-radius: 1.5rem;
+    opacity: .5;
+}
+
+.main__project_item h4 {
+  background-color: var(--color-green-primary);
+  width: var(--project-item-width);
+  margin-top: calc(90% - var(--project-item-height));
+  height: 4vh;
+  padding-top: .2%;
+  text-align: center;
+  font-size: 1.25rem;
+  z-index: 1;
+
+}
+
+.main__project_item span {
+  width: calc(var(--project-item-width) - 45vh);
+  height: 4.5vh;
+  border-radius: .5rem;
+  background-color: var(--color-blue-primary);
+  text-align: center;
+  padding-top: 1.25%;
+  margin-left: calc(var(--project-item-width) - 45%);
+  opacity: .9;
+}
+
+/*
+  ------------
+    End Main 
+  ------------
+*/
+
+/*
+  ----------
+    Footer 
+  ----------
+*/
+
+footer {
+    background-color: var(--color-blue-primary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 60vh;
+}
+
+.main__social_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.main__social_icon img {
+  width: 40%;
+}
+.main__social_icon a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__social_icon span {
+  font-size: 1.5rem;
+}
+
+/*
+  --------------
+    End Footer 
+  --------------
+*/
+
+/*
+  ----------
+    Mobile
+  ----------
+*/
+@media screen and (max-width: 600px) {
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      flex-wrap: wrap;
+      height: var(--navbar-height);
+    }
+
+    h1 {
+      font-size: 1.2rem;
+      margin-left: 5%;
+    }
+
+    .navbar__menu {
+      display:inline;
+      background: none;
+      outline: none;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 2rem;
+    }
+
+    .navbar__menu span {
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      font-size: 3rem;
+    }
+
+    .navbar__ul {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      background-color: var(--color-blue-primary);
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    
+    .navbar__ul--active {
+      display: flex;
+    }
+
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .main__card {
+        min-width: 40%;
+        height: 30vh;
+    }
+
+    .main__card h3 {
+        font-size: 1.2rem;
+    }
+
+    .main__card img {
+        height: 45%;
+    }
+
+}
+
+/*
+  --------------
+    End Mobile
+  --------------
+*/
+
+
+@media screen and (max-width:1000px){
+
+}
+
+
+
+
+
+
+
+
