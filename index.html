@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/mobile.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+    <script defer src="public/js/main.js"></script>
 
 </head>
 
@@ -21,10 +22,14 @@
         <h1>Ignacio Fernández</h1>
 
         <button class="navbar__menu" type="button" href="#menu">
-            <span class="material-icons" id="hamburger">menu</span>
+            <i class="material-icons" id="hamburger">menu</i>
         </button>
 
         <ul class="navbar__ul" id="menu">
+
+            <button class="navbar__menu_close">
+                <i class="material-icons">close</i>
+            </button>
 
             <li><a href="#about" class="navbar__link">¿Quién Soy?</a></li>
             <li><a href="#skills" class="navbar__link">Habilidades y Conocimientos</a></li>
@@ -211,48 +216,71 @@
             <h3 class="main__project_type">Videojuegos</h3>
 
             <div>
+
                 <article class="main__project_item">
+                    <div class="project__card">
+                        <div class="project__face project__card--front"></div>
+                            <img src="public/img/projects/catchemall.png" alt="Catch Em All">
 
-                    <img src="public/img/projects/catchemall.png" alt="Catch Em All">
+                            <span>Godot Engine, GDScript</span>
+                            <h4>Catch Em All</h4>
 
-                    <h4>Catch Em All</h4>
+                        </div>
+                        <div class="project__face project__card--back">
+                            <h5>Catch em All</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quis dolor, soluta recusandae rem culpa minima enim accusantium eius quam sunt pariatur repudiandae, cumque nemo beatae architecto ipsa distinctio fugiat.</p>
+                        </div>
+                    </div>
+                </article>
 
-                    <span>Godot Engine, GDScript</span>
+            
 
+                <article class="main__project_item">
+                    <div class="project__card">
+                        <div class="project__face project__card--front"></div>
+                            <img src="public/img/projects/dummynoid.png" alt="Dummynoid">
+
+                            <span>Godot Engine, GDScript</span>
+                            <h4>Dummynoid</h4>
+
+                        </div>
+                        <div class="project__face project__card--back">
+                            <h5>Hola Mundo</h5>
+                        </div>
+                    </div>
                 </article>
 
                 <article class="main__project_item">
+                    <div class="project__card">
+                        <div class="project__face project__card--front"></div>
+                            <img src="public/img/projects/endlessking.png" alt="Endless King">
 
-                    <img src="public/img/projects/dummynoid.png" alt="Dummynoid">
+                            <span>Unity Engine, C#</span>
+                            <h4>Endless King</h4>
 
-                    <h4>Dummynoid</h4>
-
-                    <span>Godot Engine, GDScript</span>
-
+                        </div>
+                        <div class="project__face project__card--back">
+                            <h5>Hola Mundo</h5>
+                        </div>
+                    </div>
                 </article>
-
-                <article class="main__project_item">
-
-                    <img src="public/img/projects/endlessking.png" alt="Endless King">
-
-                    <h4>Endless King</h4>
-
-                    <span>Unity Engine, C#</span>
-
-                </article>
-            </div>
 
             <h3 class="main__project_type">Web</h3>
 
             <div>
                 <article class="main__project_item">
+                    <div class="project__card">
+                        <div class="project__face project__card--front"></div>
+                            <img src="public/img/projects/technews.png" alt="Technews">
 
-                    <img src="public/img/projects/technews.png" alt="Technews">
+                            <span>HTML 5, CSS 3, JS</span>
+                            <h4>Technews</h4>
 
-                    <h4>Technews</h4>
-
-                    <span>HTML 5, CSS 3, JS</span>
-
+                        </div>
+                        <div class="project__face project__card--back">
+                            <h5>Hola Mundo</h5>
+                        </div>
+                    </div>
                 </article>
             </div>
 
@@ -260,24 +288,34 @@
 
             <div>
                 <article class="main__project_item">
+                    <div class="project__card">
+                        <div class="project__face project__card--front"></div>
+                            <img src="public/img/projects/randomwordgenerator.png" alt="Random Words App">
 
-                    <img src="public/img/projects/randomwordgenerator.png" alt="Random Words App">
+                            <span>Flutter, Dart</span>
+                            <h4>Random Words App</h4>
 
-                    <h4>Random Words App</h4>
-
-                    <span>Flutter, Dart</span>
-
+                        </div>
+                        <div class="project__face project__card--back">
+                            <h5>Hola Mundo</h5>
+                        </div>
+                    </div>
                 </article>
 
 
                 <article class="main__project_item">
+                    <div class="project__card">
+                        <div class="project__face project__card--front"></div>
+                            <img src="public/img/projects/djangobot.png" alt="Django">
 
-                    <img src="public/img/projects/djangobot.png" alt="DJANGO bot">
+                            <span>Godot Engine, GDScript</span>
+                            <h4>DJANGO: Bot de Discord</h4>
 
-                    <h4>DJANGO Bot de Discord</h4>
-
-                    <span>Godot Engine, GDScript</span>
-
+                        </div>
+                        <div class="project__face project__card--back">
+                            <h5>Hola Mundo</h5>
+                        </div>
+                    </div>
                 </article>
             </div>
 
@@ -293,7 +331,7 @@
 
         <article class="main__social_icon">
 
-            <a href="">
+            <a href="https://github.com/Chonp1543" target="_blank">
 
                 <img src="public/img/icons/github-logo-240.png" alt="github">
 
@@ -317,7 +355,7 @@
 
         <article class="main__social_icon">
 
-            <a href="">
+            <a href="https://instagram.com/fernandez_.nacho?igshid=ZmRlMzRkMDU=" target="_blank">
 
                 <img src="public/img/icons/instagram-logo-240.png" alt="instagram">
 
@@ -340,7 +378,6 @@
         </article>
 
     </footer>
-    <script src="public/js/main.js"></script>
 </body>
 
 </html>
