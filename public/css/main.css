@@ -37,6 +37,7 @@
   list-style: none;
   font-family: 'Baloo Bhai 2';
   scroll-behavior: smooth;
+  text-align: justify;
 }
 
 
@@ -364,10 +365,24 @@ h2 {
 }
 
 .project__card--back {
+  display: flex;
+  padding: 1rem 2rem;
   background-color: var(--color-blue-primary);
   transform: rotateY(-180deg);
 }
 
+.project__card--back h5 {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  width: var(--project-item-width);
+  border-bottom: #fff 2px solid;
+}
+
+
+.project__card--back p {
+  font-size: 1.25rem;
+  text-align: justify;
+}
 
 
 .main__project_item img {
@@ -440,11 +455,261 @@ footer {
   font-size: 1.5rem;
 }
 
-/*
-  ----------
-    Tablet
-  ----------
-*/
+
+@media screen and (max-width: 500px) {
+
+  :root {
+      --main-card-height: 28vh;
+      --main-card-width: 20vh;
+      --project-item-width: 50vh;
+      --project-item-height: 30vh;
+      --main-about-width: 50vh;
+  }
+
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      flex-wrap: wrap;
+      height: var(--navbar-height);
+  }
+
+  h1 {
+      font-size: 1.2rem;
+      margin-left: 5%;
+  }
+
+  .navbar__menu {
+      display: inline;
+      background: none;
+      outline: none;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 2rem;
+  }
+
+  .navbar__menu i {
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      font-size: 3rem;
+  }
+
+  .navbar__menu_close {
+      display: block;
+      position: absolute;
+      right: .5rem;
+      top: .5rem;
+      width: 4rem;
+      height: 4rem;
+  }
+  .navbar__menu_close i {
+      width: 100%;
+      height: 100%;
+      font-size: 3rem;
+  }
+
+  .navbar__ul {
+      top: -100vh;
+      position: fixed;
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      background-color: var(--color-blue-primary);
+      justify-content: space-evenly;
+      align-items: center;
+      transition: .5s;
+  }
+
+  .navbar__ul--active {
+      top: 0;
+      transition: .5s;
+  }
+
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  .main__about {
+      width: var(--main-about-width);
+      height: 60vh;
+      flex-direction: column;
+      border-radius: 2.5%;
+  }
+
+  .main__about::before {
+      content: '';
+      position: absolute;
+      width: 10rem;
+      height: 10rem;
+      transform: translate(calc(var(--main-about-width) - 27rem), -.65rem);
+      border-bottom-right-radius: 100%;
+      border-right: 2.5rem solid var(--color-blue-primary);
+      border-bottom: 2.5rem solid var(--color-blue-primary);
+      box-shadow: var(--shadow);
+  }
+
+  .main__about::after {
+      content: '';
+      position: absolute;
+      width: 15rem;
+      height: 15rem;
+      transform: translate(calc(var(--main-about-width) - 27rem), 15.5rem);
+      border-top-right-radius: 100%;
+      border-top: 2.5rem solid var(--color-blue-primary);
+      border-right: 2.5rem solid var(--color-blue-primary);
+      box-shadow: var(--shadow-reverse);
+  }
+
+  .main__img {
+      width: 34vh;
+      height: 34vh;
+      position: absolute;
+      top: 17vh;
+      left: 18vh;
+  }
+
+  .main__description {
+      margin-top: 28vh;
+      margin-left: 10px;
+      height: calc(100% - 20vh);
+      width: 90%;
+  }
+
+  .main__description h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5vh;
+      width: 100%;
+  }
+
+  .main__description p {
+      font-size: 1rem;
+      width: 95%;
+      padding: 0 0 0 2vh;
+  }
+
+  .main__card {
+      width: var(--main-card-width);
+      height: var(--main-card-height);
+      margin: 1rem;
+  }
+
+  .main__card h3 {
+      font-size: 1.2rem;
+      z-index: 5;
+  }
+
+  .main__card h3::before {
+      content: '';
+      position: absolute;
+      width: 3rem;
+      height: 3rem;
+      transform: translate(-3.9rem, -1.15rem);
+      border-bottom-right-radius: 100%;
+      border-right: .5rem solid var(--color-blue-primary);
+      border-bottom: .5rem solid var(--color-blue-primary);
+      box-shadow: var(--shadow-reverse);
+  }
+
+  .main__card h3::after {
+      content: '';
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      transform: translate(-2.6rem, 8.45rem);
+      border-top-right-radius: 100%;
+      border-top: 1em solid var(--color-blue-primary);
+      border-right: 1rem solid var(--color-blue-primary);
+      box-shadow: var(--shadow-reverse);
+  }
+
+  .main__card div::before {
+      content: '';
+      position: absolute;
+      object-fit: cover;
+      width: 50px;
+      height: 100px;
+      transform: translate(2.45rem, -5rem);
+      border-radius: 75px 0 0 75px;
+      background-color: var(--color-blue-primary);
+      box-shadow: var(--shadow);
+  }
+
+  .main__card div::after {
+      content: '';
+      position: absolute;
+      width: 4rem;
+      height: 4rem;
+      transform: translate(.6rem, -12.65rem);
+      border-bottom-left-radius: 100%;
+      border-left: 1rem solid var(--color-blue-primary);
+      border-bottom: 1rem solid var(--color-blue-primary);
+      box-shadow: var(--shadow);
+  }
+
+  .main__card img {
+      height: 45%;
+  }
+
+  .main__project_type {
+      width: 30vh;
+      height: 6vh;
+      padding: 8px 0;
+  }
+
+  .main__project_item {
+      width: var(--project-item-width);
+      height: var(--project-item-height);
+  }
+
+  .main__project_item h4 {
+      margin-top: calc(80% - var(--project-item-height));
+      font-size: 1.2rem;
+      padding-top: 3px;
+  }
+
+  .main__project_item span {
+      width: calc(var(--project-item-width) - 23vh);
+      margin-left: 40%;
+      padding-top: 7px;
+  }
+
+  .project__card--back h4 {
+      font-size: 12px;
+  }
+
+  .project__card--back p {
+      font-size: 12px;
+    }
+
+
+  footer {
+      height: 25vh;
+  }
+
+  footer h2 {
+      margin-top: 2vh;
+  }
+
+  .main__social_icon {
+      margin-bottom: 15vh;
+  }
+
+  .main__social_icon a {
+      width: 6rem;
+  }
+
+  .main__social_icon span {
+      font-size: 1rem;
+  }
+
+}
+
 
 @media screen and (min-width:500px) and (max-width:1600px) {
 
@@ -492,23 +757,29 @@ footer {
 
   .main__img {
     position: absolute;
-    width: 15rem;
-    height: 15rem;
-    margin-left: 3rem;
+    width: 22rem;
+    height: 22rem;
+    right: 2.5%;
+    margin-top: 10rem;
   }
 
   .main__description {
     width: 80%;
-    height: 50%;
+    height: 80%;
+    margin-top: 5rem;
+    margin-right: 200px;
   }
 
   .main__description h3 {
     font-size: 2rem;
+    text-align: start;
 
   }
 
   .main__description p {
     font-size: 1.5rem;
+    padding-left: 10%;
+    padding-right: 30%;
   }
 
   .main__section h2 {
@@ -517,14 +788,71 @@ footer {
   }
 
   .main__card {
-    width: 15rem;
-    height: 23rem;
+    width: 12rem;
+    height: 18rem;
+    margin: .5rem;
   }
 
+  .main__card h3 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+  }
 
-
-
+  .main__card h3::before {
+    content: '';
+    position: absolute;
+    width: 3.2rem;
+    height: 3.2rem;
+    transform: translate(-4.15rem, -3.5rem);
+    border-bottom-right-radius: 100%;
+    border-right: .5rem solid var(--color-blue-primary);
+    border-bottom: .5rem solid var(--color-blue-primary);
+    box-shadow: var(--shadow-reverse);
+  }
   
+  .main__card h3::after {
+    content: '';
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    transform: translate(-3rem, 8.5rem);
+    border-top-right-radius: 100%;
+    border-top: 1rem solid var(--color-blue-primary);
+    border-right: 1rem solid var(--color-blue-primary);
+    box-shadow: var(--shadow-reverse);
+  }
+
+  .main__card div::before {
+    content: '';
+    position: absolute;
+    object-fit: cover;
+    width: 50px;
+    height: 100px;
+    transform: translate(2.8rem, -5rem);
+    border-radius: 120px 0 0 120px;
+    background-color: var(--color-blue-primary);
+    box-shadow: var(--shadow);
+  }
+  
+  .main__card div::after {
+    content: '';
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    transform: translate(1.25rem, -15.55rem);
+    border-bottom-left-radius: 100%;
+    border-left: .75rem solid var(--color-blue-primary);
+    border-bottom: .75rem solid var(--color-blue-primary);
+    box-shadow: var(--shadow);
+  }
+
+  #projects {
+    width: 100%;
+  }
+
+  .project__card--back p {
+    font-size: 1.15rem;
+  }
 
 
 }
