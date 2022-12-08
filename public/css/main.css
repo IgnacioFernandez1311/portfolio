@@ -41,13 +41,6 @@
 }
 
 
-/*
-  --------------
-    End General 
-  --------------
-*/
-
-
 body {
   background-color: #333;
 }
@@ -186,6 +179,12 @@ h2 {
   z-index: 10;
 }
 
+/*
+  ---------
+    Cards
+  ---------
+*/
+
 .main__card {
   display: flex;
   flex-direction: column;
@@ -243,6 +242,12 @@ h2 {
   text-align: center;
   border-radius: 1rem;
 }
+
+/*
+  -----------------
+    Project Items
+  -----------------
+*/
 
 .main__project_item {
   display: flex;
@@ -376,181 +381,187 @@ footer {
   font-size: 1.5rem;
 }
 
+/*
+  ----------
+    Mobile
+  ----------
+*/
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
 
   :root {
-      --main-card-height: 28vh;
-      --main-card-width: 20vh;
-      --project-item-width: 45vh;
-      --project-item-height: 30vh;
-      --main-about-width: 43vh;
+    --main-card-height: 28vh;
+    --main-card-width: 20vh;
+    --project-item-width: 43vh;
+    --project-item-height: 30vh;
+    --main-about-width: 43vh;
   }
 
   .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      flex-wrap: wrap;
-      height: var(--navbar-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    flex-wrap: wrap;
+    height: var(--navbar-height);
   }
 
   h1 {
-      font-size: 1.2rem;
-      margin-left: 5%;
+    font-size: 1.2rem;
+    margin-left: 5%;
   }
 
   .navbar__menu {
-      display: inline;
-      background: none;
-      outline: none;
-      border: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 2rem;
+    display: inline;
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
   }
 
   .navbar__menu i {
-      text-align: center;
-      height: 100%;
-      width: 100%;
-      font-size: 3rem;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-size: 3rem;
   }
 
   .navbar__menu_close {
-      display: block;
-      position: absolute;
-      right: .5rem;
-      top: .5rem;
-      width: 4rem;
-      height: 4rem;
+    display: block;
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+    width: 4rem;
+    height: 4rem;
   }
+
   .navbar__menu_close i {
-      width: 100%;
-      height: 100%;
-      font-size: 3rem;
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
   }
 
   .navbar__ul {
-      top: -100vh;
-      position: fixed;
-      display: flex;
-      width: 100vw;
-      height: 100vh;
-      flex-direction: column;
-      background-color: var(--color-blue-primary);
-      justify-content: space-evenly;
-      align-items: center;
-      transition: .5s;
+    top: -100vh;
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--color-blue-primary);
+    justify-content: space-evenly;
+    align-items: center;
+    transition: .5s;
   }
 
   .navbar__ul--active {
-      top: 0;
-      transition: .5s;
+    top: 0;
+    transition: .5s;
   }
 
 
   h2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .main__about {
-      width: var(--main-about-width);
-      height: 60vh;
-      flex-direction: column;
-      border-radius: 2.5%;
-      background-image: url(../img/cards/card_background.png);
-      background-size: cover;
+    width: var(--main-about-width);
+    height: 60vh;
+    flex-direction: column;
+    border-radius: 2.5%;
+    background-image: url(../img/cards/card_background.png);
+    background-size: cover;
   }
 
   .main__img {
-      width: 30vh;
-      height: 30vh;
-      position: absolute;
-      top: 17vh;
-      left: 30%;
+    width: 30vh;
+    height: 30vh;
+    position: absolute;
+    top: 17vh;
+    left: 30%;
   }
 
   .main__description {
-      margin-top: 28vh;
-      margin-left: 10px;
-      height: calc(100% - 20vh);
-      width: 90%;
+    margin-top: 28vh;
+    margin-left: 10px;
+    height: calc(100% - 20vh);
+    width: 90%;
   }
 
   .main__description h3 {
-      font-size: 1.1rem;
-      margin-bottom: 1.5vh;
-      width: 100%;
+    font-size: 1.1rem;
+    margin-bottom: 1.5vh;
+    width: 100%;
   }
 
   .main__description p {
-      font-size: .95rem;
-      width: 95%;
-      padding: 0 0 0 2vh;
+    font-size: .95rem;
+    width: 95%;
+    padding: 0 0 0 2vh;
   }
 
   .main__card {
-      width: var(--main-card-width);
-      height: var(--main-card-height);
-      margin: .5rem;
+    width: var(--main-card-width);
+    height: var(--main-card-height);
+    margin: .5rem;
   }
 
   .main__card h3 {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   .main__card img {
-      height: 45%;
+    height: 45%;
   }
 
   .main__project_type {
-      width: 30vh;
-      height: 6vh;
-      padding: 8px 0;
+    width: 30vh;
+    height: 6vh;
+    padding: 8px 0;
   }
 
   .main__project_item h4 {
-      margin-top: calc(80% - var(--project-item-height));
-      font-size: 1.2rem;
-      padding-top: 3px;
+    margin-top: calc(80% - var(--project-item-height));
+    font-size: 1.2rem;
+    padding-top: 3px;
   }
 
   .main__project_item span {
-      width: calc(var(--project-item-width) - 23vh);
-      margin-left: 40%;
-      padding-top: 7px;
+    width: calc(var(--project-item-width) - 15vh);
+    margin-left: 30%;
+    padding-top: 7px;
   }
 
   .project__card--back h4 {
-      font-size: 12px;
+    font-size: 12px;
   }
 
   .project__card--back p {
-      font-size: 12px;
-    }
+    font-size: 12px;
+  }
 
 
   footer {
-      height: 25vh;
+    height: 25vh;
   }
 
   footer h2 {
-      margin-top: 2vh;
+    margin-top: 2vh;
   }
 
   .main__social_icon {
-      margin-bottom: 15vh;
+    margin-bottom: 15vh;
   }
 
   .main__social_icon a {
-      width: 6rem;
+    width: 6rem;
   }
 
   .main__social_icon span {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
 }
@@ -565,6 +576,7 @@ footer {
   .main__description h3 {
     font-size: 1rem;
   }
+
   .main__description p {
     font-size: .85rem;
   }
@@ -575,43 +587,111 @@ footer {
 
 }
 
+
+/*
+  ----------
+    Tablet
+  ----------
+*/
+
 @media screen and (min-width:500px) and (max-width:1600px) {
 
-  .navbar {
-    justify-content: space-around;
-    width: 100%;
+  :root {
+    --main-about-width: 70vh;
   }
 
-  .navbar h1 {
-    display: none;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    flex-wrap: wrap;
+    height: var(--navbar-height);
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    margin-left: 5%;
+  }
+
+  .navbar__menu {
+    display: inline;
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+  }
+
+  .navbar__menu i {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-size: 3rem;
+  }
+
+  .navbar__menu_close {
+    display: block;
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .navbar__menu_close i {
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
   }
 
   .navbar__ul {
-    justify-content: space-around;
-    width: 100%;
+    top: -100vh;
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--color-blue-primary);
+    justify-content: space-evenly;
+    align-items: center;
+    transition: .5s;
   }
 
-  .navbar__link {
-    font-size: 75%;
+  .navbar__ul--active {
+    top: 0;
+    transition: .5s;
+  }
+
+  .main__about {
+    width: var(--main-about-width);
+    height: 80vh;
+    flex-direction: column;
+    border-radius: 2.5%;
+    background-image: url(../img/cards/card_background.png);
+    background-size: cover;
   }
 
   .main__img {
     position: absolute;
-    width: 22rem;
-    height: 22rem;
-    right: 2.5%;
-    margin-top: 10rem;
+    width: 25rem;
+    height: 25rem;
+    right: 2%;
+    top: 17%;
   }
 
   .main__description {
-    width: 80%;
+    width: 90%;
     height: 80%;
-    margin-top: 5rem;
+    margin-top: 20rem;
     margin-right: 200px;
   }
 
   .main__description h3 {
     font-size: 2rem;
+    margin-bottom: 2rem;
     text-align: start;
 
   }
@@ -619,7 +699,7 @@ footer {
   .main__description p {
     font-size: 1.5rem;
     padding-left: 10%;
-    padding-right: 30%;
+    padding-right: 10%;
   }
 
   .main__section h2 {
@@ -628,9 +708,10 @@ footer {
   }
 
   .main__card {
-    width: 12rem;
-    height: 18rem;
+    width: 10rem;
+    height: 14rem;
     margin: .5rem;
+    padding-bottom: 5rem;
   }
 
   .main__card h3 {
@@ -646,5 +727,7 @@ footer {
     font-size: 1.15rem;
   }
 
-
+  footer {
+    height: 40vh;
+  }
 }
