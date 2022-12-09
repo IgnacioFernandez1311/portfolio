@@ -128,7 +128,7 @@ h2 {
 .main__about {
   padding: 2%;
   width: 90%;
-  border-radius: 1.5rem;
+  border-radius: 5rem;
   display: flex;
   flex-direction: row-reverse;
   background-image: url(../img/cards/main_card_background.png);
@@ -392,7 +392,7 @@ footer {
   :root {
     --main-card-height: 26vh;
     --main-card-width: 18vh;
-    --project-item-width: 43vh;
+    --project-item-width: 90vw;
     --main-about-width: 43vh;
   }
 
@@ -471,7 +471,7 @@ footer {
     min-height: 60vh;
     padding-top: 60%;
     flex-direction: column;
-    border-radius: 2.5%;
+    border-radius: 2rem;
     background-image: url(../img/cards/card_background.png);
     background-size: cover;
   }
@@ -533,13 +533,13 @@ footer {
   }
 
   .main__project_item span {
-    width: calc(var(--project-item-width) - 20vh);
+    width: calc(var(--project-item-width) - 25vh);
     margin-left: 40%;
     padding-top: 7px;
   }
 
   .project__card--back h4 {
-    font-size: .5rem;
+    font-size: .2rem;
   }
 
   .project__card--back p {
@@ -565,6 +565,14 @@ footer {
 
   .main__social_icon span {
     font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-height: 800px) {
+
+  .project__card--back p {
+    font-size: .5rem;
   }
 
 }
