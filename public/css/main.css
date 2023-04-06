@@ -128,7 +128,7 @@ h2 {
 .main__about {
   padding: 2%;
   width: 90%;
-  border-radius: 5rem;
+  border-radius: 2.5rem;
   display: flex;
   flex-direction: row-reverse;
   background-image: url(../img/cards/main_card_background.png);
@@ -280,7 +280,7 @@ h2 {
 .project__face {
   width: var(--project-item-width);
   height: var(--project-item-height);
-  margin: 2rem;
+  margin: rem;
   position: absolute;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -309,6 +309,26 @@ h2 {
   text-align: justify;
 }
 
+.project__card--back a {
+  padding: 0px 8px;
+  padding-top: 2px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: #fff 1px solid;
+  text-align: center;
+  display: flex;
+  transition: ease-in-out .2s;
+}
+
+.project__card--back a:hover {
+  background-color: var(--color-green-primary);
+  transition: ease-in-out .2s;
+}
+
+.project__card--back a > i {
+  align-items: center;
+}
+
 
 .main__project_item img {
   object-fit: cover;
@@ -322,7 +342,6 @@ h2 {
 .main__project_item h4 {
   background-color: var(--color-green-primary);
   width: var(--project-item-width);
-  border-radius: 8px;
   height: 4vh;
   padding-top: .2%;
   text-align: center;
@@ -727,7 +746,7 @@ footer {
   }
 
   footer {
-    height: 30vh;
+    height: 34vh;
   }
 
   footer h2 {

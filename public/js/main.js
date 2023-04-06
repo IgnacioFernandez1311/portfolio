@@ -8,7 +8,7 @@ addEventListener("DOMContentLoaded", () => {
     const navbarItems = document.querySelectorAll(".navbar__link")
     const navbarMenuClose = document.querySelector(".navbar__menu_close")
     const projectItemsFlip = document.querySelectorAll(".main__project_item")
-    
+
     hamburgerMenu.onclick = function () {
         navbarList.classList.add("navbar__ul--active")
     }
