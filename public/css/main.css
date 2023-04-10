@@ -565,6 +565,21 @@ footer {
     font-size: .65rem;
   }
 
+  .project__card--back a {
+    padding: 0px 4px;
+    padding-top: 1px;
+    font-size: .75rem;
+    border-radius: 5px;
+    border: #fff 1px solid;
+    text-align: center;
+    display: flex;
+    transition: ease-in-out .2s;
+  }
+  
+  .project__card--back a > i {
+    align-items: center;
+    font-size: 1.1rem;
+  }
 
   footer {
     height: 25vh;
